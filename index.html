@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Tweet</title>
+</head>
+<body>
+  <div class="tweet-block">
+    <textarea onkeyup="updateValue(this.value)" cols="80" rows="20"></textarea>
+    <p>
+      <button onclick="copyText()">copy</button>
+      <span class="count">0</span>
+    </p>
+  </div>
+
+  <script>
+    const textarea = document.querySelector('textarea');
+    const countEl = document.getElementsByClassName('count');
+    textarea.value = localStorage.tempText || '';
+    countEl[0].innerText = `${(localStorage.tempText || '').length}文字`;
+
+    function updateValue(value = '') {
+      localStorage.setItem('tempText', value)
+      countEl[0].innerText = `${value.length}文字`;
+    }
+
+    function copyText() {
+      textarea.select();
+      document.execCommand("copy");
+    }
+  </script>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      background: #EEE;
+    }
+    textarea {
+      font-family: auto;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    button {
+      padding: .5rem 1rem;
+      margin: 0 .5rem;
+      border: 2px solid teal;
+      border-radius: 8px;
+      background: seagreen;
+      color: white;
+    }
+    .tweet-block {
+      margin: auto;
+      padding: 1rem;
+      width: 48rem;
+      border-radius: 3px;
+      background: #FFFFFF;
+      text-align: center;
+    }
+  </style>
+</body>
+</html>
