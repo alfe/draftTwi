@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background: #EEE;
+}
+textarea {
+  font-family: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+button {
+  padding: .5rem 1rem;
+  margin: 0 .5rem;
+  border: 2px solid teal;
+  border-radius: 8px;
+  background: seagreen;
+  color: white;
+  cursor: pointer;
+}
+button:active {
+  transform: translate(1px, 1px);
+  filter: brightness(0.8);
+}
+.tweet-block {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 48rem;
+  border-radius: 8px;
+  background: #FFFFFF;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 10%);
+}
+.add-button {
+  background: slategray;
+  border: none;
+  width: 20rem;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
+.del-button {
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: gray;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  padding: 0;
+  margin: -0.5rem 0 0.5rem;
+}
+.del-button:hover {
+  background: lightgray;
+}
