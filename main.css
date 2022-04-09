@@ -6,9 +6,12 @@ body {
   background: #EEE;
 }
 textarea {
-  font-family: auto;
-  font-size: 1rem;
+  font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
   line-height: 1.5;
+  overflow-wrap: break-word;
+  color: rgb(15, 20, 25);
+  margin-left: 2rem;
 }
 button {
   padding: .5rem 1rem;
@@ -26,7 +29,7 @@ button:active {
 .tweet-block {
   margin: 1rem auto;
   padding: 1rem;
-  width: 48rem;
+  width: 44rem;
   border-radius: 8px;
   background: #FFFFFF;
   text-align: center;

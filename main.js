@@ -20,11 +20,11 @@ function renderTweetBlock(id) {
   div.className = 'tweet-block';
   div.innerHTML = `
     <button class="del-button" onclick="removeTweetBlock('${id}')">×</button>
-    <textarea id="${id}" onkeyup="updateValue('${id}', this.value)" cols="80" rows="20"></textarea>
-    <p>
+    <textarea id="${id}" onkeyup="updateValue('${id}', this.value)" cols="60" rows="6"></textarea>
+    <div>
       <button onclick="copyText('${id}')">copy</button>
       <span id="${id}-count" class="count">0文字</span>
-    </p>
+    </div>
   `;
   document.getElementById('tweet-block-area').appendChild(div);
 }
